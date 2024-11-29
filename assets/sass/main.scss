@@ -1,0 +1,227 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
+
+:root {
+  --font-body: 'Muli', sans-serif;
+  --font-secund: "Josefin Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('../fonts/Muli.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Muli-Light';
+  src: url('../fonts/Muli-ExtraLight.ttf') format('truetype');
+}
+
+@mixin flex-box($dirct-row, $jtf-baseline, $alg-baseline, $gap) {
+  display: flex;
+  flex-direction: $dirct-row;
+  justify-content: $jtf-baseline;
+  align-items: $alg-baseline;
+  gap: $gap;
+}
+
+@mixin grid-layout($gd-tp-clm-auto, $gd-tp-rw-auto, $clm-gp-normal,  $rw-gp-normal) {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  column-gap: normal;
+  row-gap: normal;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+  box-shadow: 0px 0px 10px rgba(28, 29, 45, 0.56);
+  background-color: rgba(6, 6, 6, 0.42);
+  position: fixed;
+  top: 0;
+  padding: 0.7em 0;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  z-index: 3;
+
+  &__container {
+    @include flex-box(row, space-between, center, 0);
+    max-width: 1124px;
+    margin: auto;
+  }
+
+  &__logo-group {
+    @include flex-box(row, baseline, center, 6px);
+  }
+
+  &__logo-img {
+    width: 20px;
+  }
+
+  &__logo-text {
+    text-transform: uppercase;
+  }
+
+  &__list {
+    @include flex-box(row, baseline, baseline, 2em);
+
+    &-item {
+      cursor: pointer;
+      a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY();
+        }
+      }
+    }
+  }
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  position: relative;
+  background-image: url('../image/img.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 0;
+  }
+
+  &__content {
+    max-width: 1080px;
+    width: 95%;
+    margin: auto;
+    position: relative;
+    padding-top: 4em;
+    color: white;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 2;
+    gap: 1em;
+  }
+
+  &__section {
+    &--primary {
+      @include flex-box(column, center, baseline, 0);
+    }
+
+    &--video {
+      @include flex-box(row, center, center, 0);
+    }
+  }
+
+  &__title {
+    font-family: var(--font-secund);
+    font-size: 37px;
+    margin: 0 0 20px;
+    max-width: 10em;
+    font-weight: 400;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: -2px;
+    line-height: 1.12;
+  }
+
+  &__text {
+    font-family: 'Muli-Light', sans-serif;
+    max-width: 30em;
+    font-size: 15px;
+    line-height: 1.6;
+
+    &--secondary {
+      margin-top: 15px;
+    }
+  }
+
+  &__button-group {
+    margin-top: 1em;
+    @include flex-box(row, flex-start, baseline, 1em);
+  }
+}
+
+/* ========== Buttons ========== */
+.button {
+  border: none;
+  width: 14em;
+  padding: 0.8em 0;
+  text-transform: uppercase;
+  font-family: 'Muli-Light', sans-serif;
+  cursor: pointer;
+  transition: all ease .3s;
+
+  &--primary {
+    background-color: rgb(180, 70, 70);
+
+    &:hover {
+      background-color: white;
+      color: rgb(180, 70, 70);
+    }
+  }
+
+  &--secondary {
+    border: 1px solid white;
+    background-color: transparent;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  &--highlight {
+    border: 1px solid white;
+    background-color: transparent;
+    margin-top: 20px;
+    width: 17em;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+/* ========== Video ========== */
+.video {
+  @include flex-box(row, center, center, 0);
+  border: 1px solid white;
+  width: 620px;
+  height: 350px;
+  margin-bottom: 5em;
+  overflow: hidden;
+  background-color: rgb(247 247 247 / 10%);
+  cursor: pointer;
+
+  &__play {
+    width: 85px;
+    height: 85px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    @include flex-box(row, center, center, 0);
+  }
+
+  &__icon {
+    width: 40px;
+    margin-left: 10px;
+  }
+}
