@@ -104,6 +104,7 @@ $color-black: black;
   .menu-btn {
     width: 35px;
     display: none;
+    cursor: pointer;
   }
 }
 
@@ -260,7 +261,7 @@ $color-black: black;
 
   &__icon {
     width: 40px;
-    margin-left: 10px;
+    margin-left: 7px;
   }
 }
 
@@ -797,7 +798,7 @@ $color-black: black;
         transition: all 0.3s ease;
 
         &:hover {
-          transform: scale(110%);
+          transform: scale(105%);
         }
 
         iframe {

@@ -78,6 +78,7 @@
 .navbar .menu-btn {
   width: 35px;
   display: none;
+  cursor: pointer;
 }
 
 /* ========== Hero Section ========== */
@@ -234,7 +235,7 @@
 }
 .video__icon {
   width: 40px;
-  margin-left: 10px;
+  margin-left: 7px;
 }
 
 /*=====================(SOBRE O PROJETO)==============*/
@@ -790,7 +791,7 @@
   transition: all 0.3s ease;
 }
 .resultados__content__section--secundary .card-location:hover {
-  transform: scale(110%);
+  transform: scale(105%);
 }
 .resultados__content__section--secundary .card-location iframe {
   border-radius: 10px;
