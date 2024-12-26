@@ -16,7 +16,7 @@
   font-family: "Muli-Light";
   src: url("../fonts/Muli-ExtraLight.ttf") format("truetype");
 }
-.contato__content__section--secundary, .contato__content__section--primary, .resultados__content__section--secundary, .resultados__content__section--primary, .material__content__section--secundary, .material__content__section--primary, .desvendando__content__section--secundary__btns-2, .desvendando__content__section--primary, .sobre__content__section, .hero__section--video, .hero__section--primary {
+.contato__content__section--secundary, .contato__content__section--primary, .resultados__content__section--secundary, .resultados__content__section--primary, .material__content__section--secundary, .material__content__section--primary, .desvendando__content__section--secundary__btns-2, .desvendando__content__section--secundary__btns, .desvendando__content__section--primary, .sobre__content__section, .hero__section--video, .hero__section--primary {
   transition: all 1s ease;
 }
 
@@ -161,8 +161,10 @@
 .button {
   border: none;
   color: white;
-  width: 14em;
-  padding: 0.8em 0;
+  width: 13.5em;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 0.7em 0;
   text-transform: uppercase;
   font-family: "Muli-Light", sans-serif;
   cursor: pointer;

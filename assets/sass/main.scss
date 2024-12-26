@@ -187,8 +187,10 @@ $color-black: black;
 .button {
   border: none;
   color: $color-white;
-  width: 14em;
-  padding: 0.8em 0;
+  width: 13.5em;
+  font-size: .9em;
+  text-align: center;
+  padding: 0.7em 0;
   text-transform: uppercase;
   font-family: "Muli-Light", sans-serif;
   cursor: pointer;
@@ -531,6 +533,7 @@ $color-black: black;
       @include flex-box(column, flex-start, flex-start, 5px);
 
       &__btns {
+        @extend %transition-animed;
         @include flex-box(row, space-between, center, 10px);
 
         .btn {
