@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('resize', () => {
-    const largura = window.innerWidth; 
+    const largura = window.innerWidth;
 
     if (largura > 1000) {
       const listMenu = getElement('.navbar__list');
@@ -31,8 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
       btnMenu.setAttribute('src', 'assets/image/menu-humburguer.png');
       isMenuVisible = false;
     }
-});
+  });
 
+  // Observações
+  criarObservacao('.hide-1', 'show');
+  criarObservacao('.hide-2', 'show-2');
 });
 
 function openCloseMenu(visible) {
@@ -45,7 +48,7 @@ function openCloseMenu(visible) {
 
 // Função para adicionar e remover o frame do vídeo ao box
 function handlerClickBoxVideo(box, frame = true) {
-  box.innerHTML = frame 
+  box.innerHTML = frame
     ? `<iframe 
         allow="autoplay; encrypted-media; accelerometer; clipboard-write; gyroscope; picture-in-picture; web-share" 
         src="https://www.youtube.com/embed/iZwb0yh2klk?autoplay=1&si=Qhwv_mt5CqlOvGBr" 
@@ -59,7 +62,6 @@ function handlerClickBoxVideo(box, frame = true) {
       </div>`;
 }
 
-
 // Função de alternar valores booleanos de variáveis
 function toggleVariable(variable) {
   return !variable;
@@ -71,8 +73,15 @@ function getElement(clss, multiple = false) {
     document.querySelector(clss);
 }
 
-
 //Função responsável por aplicar animações com quando os elementos estão observáveis
+// Uso:
+/*
+  criarObservacao('.hide-1', 'show-1');
+  criarObservacao('.hide-2', 'show-2');
+  criarObservacao('.hide-2-1', 'show-2-1');
+  criarObservacao('.hide-2-2', 'show-2-2');
+  criarObservacao('.hide-3-1', 'show-3-1');
+*/
 function criarObservacao(classeOculta, classeMostrar) {
   const observacao = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -87,4 +96,3 @@ function criarObservacao(classeOculta, classeMostrar) {
   const elementosOcultos = document.querySelectorAll(classeOculta);
   elementosOcultos.forEach((element) => observacao.observe(element));
 }
-

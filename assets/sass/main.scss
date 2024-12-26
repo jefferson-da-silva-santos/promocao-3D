@@ -51,6 +51,9 @@ $color-black: black;
   }
 }
 
+%transition-animed {
+  transition: all 1s ease;
+}
 /* ========== Navbar ========== */
 .navbar {
   @include flex-box(row, center, center, 0);
@@ -143,10 +146,12 @@ $color-black: black;
   &__section {
     &--primary {
       @include flex-box(column, center, baseline, 0);
+      @extend %transition-animed;
     }
 
     &--video {
       @include flex-box(row, center, center, 0);
+      @extend %transition-animed;
     }
   }
 
@@ -281,6 +286,7 @@ $color-black: black;
     margin: auto;
 
     &__section {
+      @extend %transition-animed;
       @include flex-box(column, center, baseline, 0);
 
       &__group-sup {
@@ -489,6 +495,7 @@ $color-black: black;
     margin: auto;
 
     &__section--primary {
+      @extend %transition-animed;
       @include flex-box(column, center, center, 5px);
       text-align: center;
 
@@ -536,6 +543,7 @@ $color-black: black;
       }
 
       &__btns-2 {
+        @extend %transition-animed;
         margin-top: 2em;
         @include flex-box(row, space-between, center, 10px);
 
@@ -576,6 +584,7 @@ $color-black: black;
         @include flex-box(column, flex-start, normal, 10px);
 
         &__box {
+          transition: all 1s ease;
           .question {
             border-radius: 5px;
             border: 1px solid rgb(231, 230, 230);
@@ -620,6 +629,7 @@ $color-black: black;
     margin: auto;
 
     &__section--primary {
+      @extend %transition-animed;
       .group {
         @include flex-box(row, flex-start, center, 10px);
         img {
@@ -657,6 +667,7 @@ $color-black: black;
     }
 
     &__section--secundary {
+      @extend %transition-animed;
       @include flex-box(column, center, center, 1em);
       text-align: center;
       img {
@@ -742,6 +753,7 @@ $color-black: black;
     }
 
     &__section--primary {
+      @extend %transition-animed;
       @include flex-box(column, center, baseline, 0);
       color: $color-white;
       text-align: center;
@@ -781,6 +793,7 @@ $color-black: black;
     }
 
     &__section--secundary {
+      @extend %transition-animed;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto;
@@ -848,6 +861,7 @@ $color-black: black;
     margin: auto;
 
     &__section--primary {
+      @extend %transition-animed;
       .group {
         @include flex-box(row, flex-start, center, 7px);
         margin: auto;
@@ -918,6 +932,7 @@ $color-black: black;
     }
 
     &__section--secundary {
+      @extend %transition-animed;
       @include flex-box(column, center, center, 2em);
       &__img {
         max-width: 20em;
@@ -1357,4 +1372,26 @@ $color-black: black;
   .button--primary {
     max-width: 10em;
   }
+}
+
+// Animações Scroll
+
+.hide-1 {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.hide-2 {
+  transform: translate(-50%);
+  opacity: 0;
+}
+
+.show-2 {
+  transform: translateX(0);
+  opacity: 1;
 }

@@ -16,6 +16,10 @@
   font-family: "Muli-Light";
   src: url("../fonts/Muli-ExtraLight.ttf") format("truetype");
 }
+.contato__content__section--secundary, .contato__content__section--primary, .resultados__content__section--secundary, .resultados__content__section--primary, .material__content__section--secundary, .material__content__section--primary, .desvendando__content__section--secundary__btns-2, .desvendando__content__section--primary, .sobre__content__section, .hero__section--video, .hero__section--primary {
+  transition: all 1s ease;
+}
+
 /* ========== Navbar ========== */
 .navbar {
   display: flex;
@@ -557,6 +561,9 @@
   justify-content: flex-start;
   align-items: normal;
   gap: 10px;
+}
+.desvendando__content__section--secundary__group-box__box {
+  transition: all 1s ease;
 }
 .desvendando__content__section--secundary__group-box__box .question {
   border-radius: 5px;
@@ -1256,6 +1263,25 @@
   .button--primary {
     max-width: 10em;
   }
+}
+.hide-1 {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.hide-2 {
+  transform: translate(-50%);
+  opacity: 0;
+}
+
+.show-2 {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */
