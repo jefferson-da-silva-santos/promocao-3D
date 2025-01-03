@@ -125,7 +125,7 @@ $color-black: black;
     top: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.877);
+    background-color: rgba(0, 0, 0, 0.631);
     z-index: 0;
   }
 
@@ -150,8 +150,35 @@ $color-black: black;
     }
 
     &--video {
-      @include flex-box(row, center, center, 0);
+      @include flex-box(column, center, center, 1em);
       @extend %transition-animed;
+      img {
+        width: 100%;
+        max-width: 28em;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(106%);
+        }
+      }
+      .btn {
+        @include flex-box(row, center, center, 0);
+        width: 100%;
+        max-width: 14em;
+        height: 3.3em;
+        background-image: linear-gradient(to right, #ffffff, #ffffff);
+        border-radius: 20px;
+        color: black;
+        font-weight: bold;
+        box-shadow: 0px 0px 5px #5ce2e7;
+        animation: animatedBtn 8s ease 0s infinite alternate-reverse forwards;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(106%);
+        }
+      }
     }
   }
 
@@ -171,6 +198,7 @@ $color-black: black;
     max-width: 30em;
     font-size: 15px;
     line-height: 1.6;
+    text-align: justify;
 
     &--secondary {
       margin-top: 15px;
@@ -234,7 +262,7 @@ $color-black: black;
   border: 1px solid $color-white;
   width: 620px;
   height: 350px;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
   overflow: hidden;
   background-color: rgb(247 247 247 / 10%);
   cursor: pointer;
@@ -324,6 +352,7 @@ $color-black: black;
         line-height: 1.6;
         margin-top: 25px;
         max-width: 416px;
+        text-align: justify;
       }
     }
 
@@ -335,28 +364,28 @@ $color-black: black;
 
       img {
         position: absolute;
-        max-width: 12em;
+        max-width: 100%;
+        border-radius: 5px;
         z-index: 1;
-        border-radius: 50%;
       }
 
-      .img-1 {
-        top: -2em;
-        transform: translateY(0) translateX(0);
-        animation: imgAnim1 5s ease 0s infinite normal forwards;
-      }
+      // .img-1 {
+      //   top: -2em;
+      //   transform: translateY(0) translateX(0);
+      //   animation: imgAnim1 5s ease 0s infinite normal forwards;
+      // }
 
-      .img-2 {
-        top: 4.5em;
-        left: 11.5em;
-        animation: imgAnim2 5s ease 0s infinite normal forwards;
-      }
+      // .img-2 {
+      //   top: 4.5em;
+      //   left: 11.5em;
+      //   animation: imgAnim2 5s ease 0s infinite normal forwards;
+      // }
 
-      .img-3 {
-        top: 11em;
-        left: 23em;
-        animation: imgAnim3 5s ease 0s infinite normal forwards;
-      }
+      // .img-3 {
+      //   top: 11em;
+      //   left: 23em;
+      //   animation: imgAnim3 5s ease 0s infinite normal forwards;
+      // }
 
       @keyframes imgAnim1 {
         0% {
@@ -666,6 +695,7 @@ $color-black: black;
         line-height: 1.6;
         margin-top: 25px;
         max-width: 503px;
+        text-align: justify;
       }
     }
 
@@ -673,36 +703,36 @@ $color-black: black;
       @extend %transition-animed;
       @include flex-box(column, center, center, 1em);
       text-align: center;
-      img {
-        width: 100%;
-        max-width: 28em;
-        transition: all 0.3s ease;
-        cursor: pointer;
+      // img {
+      //   width: 100%;
+      //   max-width: 28em;
+      //   transition: all 0.3s ease;
+      //   cursor: pointer;
 
-        &:hover {
-          transform: scale(106%);
-        }
-      }
+      //   &:hover {
+      //     transform: scale(106%);
+      //   }
+      // }
       .link {
         color: #959595;
       }
-      .btn {
-        @include flex-box(row, center, center, 0);
-        width: 100%;
-        max-width: 14em;
-        height: 3.3em;
-        background-image: linear-gradient(to right, #000000, #373737);
-        border-radius: 20px;
-        color: $color-white;
-        font-weight: bold;
-        box-shadow: 0px 0px 5px #5ce2e7;
-        animation: animatedBtn 8s ease 0s infinite alternate-reverse forwards;
-        transition: all 0.3s ease;
+      // .btn {
+      //   @include flex-box(row, center, center, 0);
+      //   width: 100%;
+      //   max-width: 14em;
+      //   height: 3.3em;
+      //   background-image: linear-gradient(to right, #000000, #373737);
+      //   border-radius: 20px;
+      //   color: $color-white;
+      //   font-weight: bold;
+      //   box-shadow: 0px 0px 5px #5ce2e7;
+      //   animation: animatedBtn 8s ease 0s infinite alternate-reverse forwards;
+      //   transition: all 0.3s ease;
 
-        &:hover {
-          transform: scale(106%);
-        }
-      }
+      //   &:hover {
+      //     transform: scale(106%);
+      //   }
+      // }
 
       .link {
         text-decoration: underline;
@@ -783,6 +813,7 @@ $color-black: black;
         font-size: 3rem;
         font-weight: 300;
         line-height: 1;
+        margin: 0 auto;
         text-transform: uppercase;
       }
 
@@ -792,48 +823,21 @@ $color-black: black;
         font-size: 15px;
         line-height: 1.6;
         margin-top: 1em;
+        text-align: justify;
+
       }
     }
 
     &__section--secundary {
-      @extend %transition-animed;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto;
-      row-gap: 2em;
-      column-gap: 2em;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      column-gap: 1em;
 
-      .card-location {
-        height: 18em;
-        color: $color-white;
-        padding: 1em;
-        border-radius: 10px;
-        background-color: rgb(255 255 255 / 12%);
-        @include flex-box(column, flex-start, center, 6px);
-        border: 1px solid rgb(73 73 73);
-        transition: all 0.3s ease;
-
-        &:hover {
-          transform: scale(105%);
-        }
-
-        iframe {
-          border-radius: 10px;
-          width: 100%;
-          max-width: 300px;
-          height: 180px;
-        }
-
-        &__city-name {
-          font-family: $font-secund;
-          margin-top: 1em;
-          text-align: center;
-        }
-
-        &__city-lay {
-          color: yellow;
-          text-align: center;
-        }
+      p {
+        color: white;
+        text-align: justify;
+        font-weight: 300;
       }
     }
   }
@@ -843,7 +847,7 @@ $color-black: black;
     top: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.884);
+    background-color: rgba(0, 0, 0, 0.631);
     z-index: 0;
   }
 }

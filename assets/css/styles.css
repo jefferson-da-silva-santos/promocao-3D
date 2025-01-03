@@ -16,7 +16,7 @@
   font-family: "Muli-Light";
   src: url("../fonts/Muli-ExtraLight.ttf") format("truetype");
 }
-.contato__content__section--secundary, .contato__content__section--primary, .resultados__content__section--secundary, .resultados__content__section--primary, .material__content__section--secundary, .material__content__section--primary, .desvendando__content__section--secundary__btns-2, .desvendando__content__section--secundary__btns, .desvendando__content__section--primary, .sobre__content__section, .hero__section--video, .hero__section--primary {
+.contato__content__section--secundary, .contato__content__section--primary, .resultados__content__section--primary, .material__content__section--secundary, .material__content__section--primary, .desvendando__content__section--secundary__btns-2, .desvendando__content__section--secundary__btns, .desvendando__content__section--primary, .sobre__content__section, .hero__section--video, .hero__section--primary {
   transition: all 1s ease;
 }
 
@@ -99,7 +99,7 @@
   top: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.877);
+  background-color: rgba(0, 0, 0, 0.631);
   z-index: 0;
 }
 .hero__content {
@@ -124,10 +124,39 @@
 }
 .hero__section--video {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.hero__section--video img {
+  width: 100%;
+  max-width: 28em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.hero__section--video img:hover {
+  transform: scale(106%);
+}
+.hero__section--video .btn {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0;
+  width: 100%;
+  max-width: 14em;
+  height: 3.3em;
+  background-image: linear-gradient(to right, #ffffff, #ffffff);
+  border-radius: 20px;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px #5ce2e7;
+  animation: animatedBtn 8s ease 0s infinite alternate-reverse forwards;
+  transition: all 0.3s ease;
+}
+.hero__section--video .btn:hover {
+  transform: scale(106%);
 }
 .hero__title {
   font-family: "Josefin Sans", sans-serif;
@@ -144,6 +173,7 @@
   max-width: 30em;
   font-size: 15px;
   line-height: 1.6;
+  text-align: justify;
 }
 .hero__text--secondary {
   margin-top: 15px;
@@ -206,7 +236,7 @@
   border: 1px solid white;
   width: 620px;
   height: 350px;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
   overflow: hidden;
   background-color: rgba(247, 247, 247, 0.1);
   cursor: pointer;
@@ -303,6 +333,7 @@
   line-height: 1.6;
   margin-top: 25px;
   max-width: 416px;
+  text-align: justify;
 }
 .sobre__content__section--secudary {
   position: relative;
@@ -316,24 +347,9 @@
 }
 .sobre__content__section--secudary img {
   position: absolute;
-  max-width: 12em;
+  max-width: 100%;
+  border-radius: 5px;
   z-index: 1;
-  border-radius: 50%;
-}
-.sobre__content__section--secudary .img-1 {
-  top: -2em;
-  transform: translateY(0) translateX(0);
-  animation: imgAnim1 5s ease 0s infinite normal forwards;
-}
-.sobre__content__section--secudary .img-2 {
-  top: 4.5em;
-  left: 11.5em;
-  animation: imgAnim2 5s ease 0s infinite normal forwards;
-}
-.sobre__content__section--secudary .img-3 {
-  top: 11em;
-  left: 23em;
-  animation: imgAnim3 5s ease 0s infinite normal forwards;
 }
 @keyframes imgAnim1 {
   0% {
@@ -645,6 +661,7 @@
   line-height: 1.6;
   margin-top: 25px;
   max-width: 503px;
+  text-align: justify;
 }
 .material__content__section--secundary {
   display: flex;
@@ -654,37 +671,8 @@
   gap: 1em;
   text-align: center;
 }
-.material__content__section--secundary img {
-  width: 100%;
-  max-width: 28em;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.material__content__section--secundary img:hover {
-  transform: scale(106%);
-}
 .material__content__section--secundary .link {
   color: #959595;
-}
-.material__content__section--secundary .btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  width: 100%;
-  max-width: 14em;
-  height: 3.3em;
-  background-image: linear-gradient(to right, #000000, #373737);
-  border-radius: 20px;
-  color: white;
-  font-weight: bold;
-  box-shadow: 0px 0px 5px #5ce2e7;
-  animation: animatedBtn 8s ease 0s infinite alternate-reverse forwards;
-  transition: all 0.3s ease;
-}
-.material__content__section--secundary .btn:hover {
-  transform: scale(106%);
 }
 .material__content__section--secundary .link {
   text-decoration: underline;
@@ -769,6 +757,7 @@
   font-size: 3rem;
   font-weight: 300;
   line-height: 1;
+  margin: 0 auto;
   text-transform: uppercase;
 }
 .resultados__content__section--primary__text {
@@ -777,52 +766,25 @@
   font-size: 15px;
   line-height: 1.6;
   margin-top: 1em;
+  text-align: justify;
 }
 .resultados__content__section--secundary {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  row-gap: 2em;
-  column-gap: 2em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 1em;
 }
-.resultados__content__section--secundary .card-location {
-  height: 18em;
+.resultados__content__section--secundary p {
   color: white;
-  padding: 1em;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.12);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 6px;
-  border: 1px solid rgb(73, 73, 73);
-  transition: all 0.3s ease;
-}
-.resultados__content__section--secundary .card-location:hover {
-  transform: scale(105%);
-}
-.resultados__content__section--secundary .card-location iframe {
-  border-radius: 10px;
-  width: 100%;
-  max-width: 300px;
-  height: 180px;
-}
-.resultados__content__section--secundary .card-location__city-name {
-  font-family: "Josefin Sans", sans-serif;
-  margin-top: 1em;
-  text-align: center;
-}
-.resultados__content__section--secundary .card-location__city-lay {
-  color: yellow;
-  text-align: center;
+  text-align: justify;
+  font-weight: 300;
 }
 .resultados .box {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.884);
+  background-color: rgba(0, 0, 0, 0.631);
   z-index: 0;
 }
 
