@@ -20,6 +20,74 @@
   transition: all 1s ease;
 }
 
+/* ========== Option ========== */
+.conatiner-option {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000000;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.631372549);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  display: none;
+}
+.conatiner-option .option {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  background-color: white;
+  width: 100%;
+  padding: 2rem;
+  max-width: 55em;
+  border-radius: 10px;
+  overflow: hidden;
+  border-left: 0.8em solid rgb(165, 0, 0);
+  border-right: 0.8em solid rgb(165, 0, 0);
+}
+.conatiner-option .option--primary i {
+  font-size: 2.5em;
+  color: rgb(165, 0, 0);
+}
+.conatiner-option .option--primary__title {
+  font-size: 2.1em;
+  color: #2d0000;
+  line-height: 1.1;
+  margin-bottom: 0.7em;
+}
+.conatiner-option .option--primary__text {
+  text-align: justify;
+}
+.conatiner-option .option--primary__group-text {
+  display: grid;
+  grid-template-columns: 4em 1fr;
+}
+.conatiner-option .option--secundary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.conatiner-option .option .btn-close-option {
+  position: absolute;
+  right: 0;
+  margin: 0.1em 0.2em;
+  color: #2d0000;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+.conatiner-option .option img {
+  width: 100%;
+  max-width: 20em;
+  border-radius: 5px;
+}
+
 /* ========== Navbar ========== */
 .navbar {
   display: flex;
@@ -536,14 +604,29 @@
 }
 .desvendando__content__section--secundary .btn-mapa {
   position: absolute;
-  background-color: rgba(0, 38, 255, 0.259);
+  background-color: rgba(0, 38, 255, 0.098);
   width: 10em;
   height: 10em;
   border-radius: 50%;
   border: none;
+  cursor: pointer;
+  z-index: 900;
+  animation: buttonMapa 2s ease 0s infinite normal forwards;
+}
+@keyframes buttonMapa {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(110%);
+  }
+  100% {
+    transform: scale(100%);
+  }
 }
 .desvendando__content__section--secundary .btn-mapa-1 {
   top: 0;
+  cursor: pointer;
 }
 .desvendando__content__section--secundary .btn-mapa-2 {
   top: 15%;
