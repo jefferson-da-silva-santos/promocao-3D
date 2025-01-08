@@ -32,7 +32,7 @@ const arrOption = [
   {
     id: 'm6',
     title: 'Doar sangue engorda',
-    text: 'Mito, pois doar sangue não engorda. A doação de sangue não altera o metabolismo e não interfere no ganho ou perda de peso. O corpo apenas trabalha para repor o sangue doado, o que pode gerar sensação de fome em algumas pessoas, mas isso não causa aumento de peso. Essa ideia equivocada surge porque o corpo precisa de energia para repor o volume sanguíneo doado, o que pode provocar uma leve fome, mas não altera o metabolismo de forma relevante.',
+    text: 'Mito, pois doar sangue não engorda. A doação de sangue não interfere no metabolismo nem no ganho de peso. O corpo trabalha apenas para repor o sangue doado, o que pode gerar uma leve sensação de fome, mas isso não altera o metabolismo de forma significativa.',
     src: 'assets/image/gordinho.webp'
   },
   {

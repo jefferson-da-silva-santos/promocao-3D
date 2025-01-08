@@ -37,7 +37,7 @@
   display: none;
 }
 .conatiner-option .option {
-  margin: 0 2em;
+  margin: 0 1em;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
