@@ -34,6 +34,78 @@ const arrOption = [
     title: 'Doar sangue engorda',
     text: 'Mito, pois doar sangue não engorda. A doação de sangue não altera o metabolismo e não interfere no ganho ou perda de peso. O corpo apenas trabalha para repor o sangue doado, o que pode gerar sensação de fome em algumas pessoas, mas isso não causa aumento de peso. Essa ideia equivocada surge porque o corpo precisa de energia para repor o volume sanguíneo doado, o que pode provocar uma leve fome, mas não altera o metabolismo de forma relevante.',
     src: 'assets/image/gordinho.webp'
+  },
+  {
+    id: 'm7',
+    title: 'Medo de agulhas',
+    text: 'A fobia de agulhas é um dos principais motivos que afastam doadores. Esse medo pode surgir de experiências traumáticas ou associadas à dor. É importante reforçar que as agulhas utilizadas são específicas e seguras, causando apenas um leve incômodo. Técnicas de relaxamento e apoio emocional podem ajudar a superar esse receio.',
+    src: 'assets/image/medo agulha.webp'
+  },
+  {
+    id: 'm8',
+    title: 'Medo de dor',
+    text: 'Muitas pessoas acreditam que a doação de sangue será extremamente dolorosa, o que não é verdade. A picada da agulha é rápida e comparável a um pequeno beliscão. O desconforto geralmente dura poucos segundos, e a equipe médica está preparada para garantir o máximo de conforto. Após a coleta, a maioria dos doadores relata sensação tranquila.',
+    src: 'assets/image/medo dor.webp'
+  },
+  {
+    id: 'm9',
+    title: 'Medo de tontura e náuseas',
+    text: 'Alguns doadores temem se sentir mal após a doação, como tonturas ou náuseas. Esses sintomas são raros e, quando ocorrem, geralmente estão relacionados à falta de hidratação ou jejum. Para evitar desconforto, é importante se alimentar bem e beber bastante líquido antes da doação. O descanso após o procedimento também ajuda a prevenir esses efeitos.',
+    src: 'assets/image/tontura.webp'
+  },
+  {
+    id: 'm10',
+    title: 'Medo de ver sangue',
+    text: 'Ver o próprio sangue pode causar ansiedade e até mal-estar em algumas pessoas. No entanto, durante a doação, não é necessário observar o processo, e a equipe pode distrair o doador com conversa ou música. Evitar focar na coleta e concentrar-se em pensamentos positivos são estratégias que ajudam a lidar com esse medo.',
+    src: 'assets/image/ver-sangue.webp'
+  },
+  {
+    id: 'm11',
+    title: 'Medo de centros e hospitais',
+    text: 'Ambientes hospitalares podem despertar desconforto em alguns indivíduos devido a associações negativas com doenças. Os centros de coleta de sangue são diferentes, sendo locais acolhedores e organizados para transmitir segurança. Conhecer o espaço previamente e ser bem recepcionado pela equipe ajuda a reduzir essa ansiedade.',
+    src: 'assets/image/hospitais.webp'
+  },
+  {
+    id: 'm12',
+    title: 'Medo de pegar doença',
+    text: 'Um dos mitos mais prejudiciais é o de que é possível contrair doenças ao doar sangue. No entanto, todo o material utilizado é esterilizado e descartável, garantindo total segurança. Os protocolos seguem rigorosos padrões de saúde, e não há nenhum risco de contaminação. Esclarecer essa questão é essencial para tranquilizar os doadores​​.',
+    src: 'assets/image/doencas.webp'
+  },
+  {
+    id: 'm13',
+    title: 'Leite é fraco',
+    text: 'Mito, pois o leite materno tem todos os nutrientes necessários para o desenvolvimento do bebê, independentemente de sua aparência mais rala. Sua composição é equilibrada, contendo proteínas, gorduras, vitaminas e anticorpos essenciais para a saúde da criança.',
+    src: 'assets/image/leite fraco.webp'
+  },
+  {
+    id: 'm14',
+    title: 'Só podem doar grandes quantidades',
+    text: 'Mito, pois qualquer quantidade de leite doado é importante, até mesmo 1 ml pode salvar a vida de um recém-nascido prematuro. Os Bancos de Leite Humano aceitam doações pequenas, valorizando cada contribuição para ajudar bebês em estado crítico.',
+    src: 'assets/image/leite doado.webp'
+  },
+  {
+    id: 'm15',
+    title: 'Mães podem amamentar outras crianças',
+    text: 'Mito, pois a amamentação cruzada (sem controle dos Bancos de Leite) pode transmitir doenças. A doação segura é feita por meio dos Bancos de Leite Humano, onde o leite é pasteurizado e distribuído de forma controlada para os bebês que mais precisam.',
+    src: 'assets/image/amamentar outras.webp'
+  },
+  {
+    id: 'm16',
+    title: 'Leite insuficiente',
+    text: 'Mito, pois a produção de leite é estimulada pela sucção do bebê e pela regularidade das mamadas. Na maioria dos casos, a percepção de "leite insuficiente" é equivocada, e o apoio correto pode ajudar a manter a produção adequada.',
+    src: 'assets/image/insulficiente.webp'
+  },
+  {
+    id: 'm17',
+    title: 'O bebê não quis pegar o peito',
+    text: 'Mito, pois a recusa temporária do peito pode ocorrer por diversos fatores, como mudanças na rotina, estresse ou confusão de bicos. Ajustes no ambiente e orientação adequada ajudam a superar essas dificuldades, garantindo a continuidade da amamentação.',
+    src: 'assets/image/pegar peito.webp'
+  },
+  {
+    id: 'm18',
+    title: 'Seios caem com a lactação',
+    text: 'Mito, pois o que provoca a flacidez dos seios é a genética, o envelhecimento e fatores como o ganho de peso, não a amamentação. Pelo contrário, o ato de amamentar traz benefícios à saúde da mulher, reduzindo o risco de câncer de mama e ovário​​.',
+    src: 'assets/image/seios caem.webp'
   }
 ]
 
@@ -92,7 +164,43 @@ document.addEventListener('DOMContentLoaded', () => {
       openCloseOption(false);
     })
   }
+
+  const btnMitosDoacaoSangue = getElement('.btn-01');
+  if (btnMitosDoacaoSangue) {
+    btnMitosDoacaoSangue.addEventListener('click', () => {
+      changeImage('assets/image/mapa mitos doacao de sangue.jpeg', ['m1', 'm2', 'm3', 'm4', 'm5', 'm6']);
+    });
+  }
+
+  const btnMedosDoacaoSangue = getElement('.btn-02');
+  if (btnMedosDoacaoSangue) {
+    btnMedosDoacaoSangue.addEventListener('click', () => {
+      changeImage('assets/image/mapa medos doacao de sangue.jpeg', ['m7', 'm8', 'm9', 'm10', 'm11', 'm12']);
+    });
+  }
+
+  const btnMitosDoacaoLeite = getElement('.btn-03');
+  if (btnMitosDoacaoLeite) {
+    btnMitosDoacaoLeite.addEventListener('click', () => {
+      changeImage('assets/image/mapa mitos doacao de leite materno.jpeg', ['m13', 'm14', 'm15', 'm16', 'm17', 'm18']);
+    });
+  }
+
+  
 });
+
+function changeImage(src, newClasses) {
+  const image = document.querySelector('.img-mapa');
+  image.setAttribute('src', src);
+  const buttons = document.querySelectorAll('.btn-mapa');
+
+  buttons.forEach((button, index) => {
+    if (newClasses[index]) {
+      button.classList.remove(button.classList[2]);
+      button.classList.add(newClasses[index]);
+    }
+  });
+}
 
 // Função responsável por abrir e fechar option
 // Função responsável por abrir e fechar option de forma assíncrona
