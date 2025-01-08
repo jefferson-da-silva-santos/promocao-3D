@@ -627,13 +627,14 @@
   background-color: rgb(155.5, 0, 0);
 }
 .desvendando__content__section--secundary .group-buttons .btn-02 {
-  background-color: rgb(4, 149, 197);
+  background-color: rgb(181, 0, 0);
 }
 .desvendando__content__section--secundary .group-buttons .btn-02:hover {
   background-color: rgb(3.4925373134, 130.0970149254, 172.0074626866);
 }
 .desvendando__content__section--secundary .group-buttons .btn-03 {
-  background-color: rgb(192, 192, 27);
+  background-color: rgb(255, 255, 0);
+  color: black;
 }
 .desvendando__content__section--secundary .group-buttons .btn-03:hover {
   background-color: rgb(169.6438356164, 169.6438356164, 23.8561643836);

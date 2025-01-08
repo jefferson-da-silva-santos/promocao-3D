@@ -643,14 +643,15 @@ $color-black: black;
         }
 
         .btn-02 {
-          background-color: rgb(4, 149, 197);
+          background-color: rgb(181, 0, 0);;
           &:hover {
             background-color: darken(rgb(4, 149, 197), 5%);
           }
         }
 
         .btn-03 {
-          background-color: rgb(192, 192, 27);
+          background-color: rgb(255, 255, 0);
+          color: black;
           &:hover {
             background-color: darken(rgb(192, 192, 27), 5%);
           }
