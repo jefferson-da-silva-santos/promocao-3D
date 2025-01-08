@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnMitosDoacaoSangue) {
     btnMitosDoacaoSangue.addEventListener('click', () => {
       changeImage('assets/image/mapa mitos doacao de sangue.jpeg', ['m1', 'm2', 'm3', 'm4', 'm5', 'm6']);
+      addCloseClassActive(btnMitosDoacaoSangue, ['.btn-02', '.btn-03']);
     });
   }
 
@@ -176,6 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnMedosDoacaoSangue) {
     btnMedosDoacaoSangue.addEventListener('click', () => {
       changeImage('assets/image/mapa medos doacao de sangue.jpeg', ['m7', 'm8', 'm9', 'm10', 'm11', 'm12']);
+      addCloseClassActive(btnMedosDoacaoSangue, ['.btn-03', '.btn-01']);
     });
   }
 
@@ -183,11 +185,22 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnMitosDoacaoLeite) {
     btnMitosDoacaoLeite.addEventListener('click', () => {
       changeImage('assets/image/mapa mitos doacao de leite materno.jpeg', ['m13', 'm14', 'm15', 'm16', 'm17', 'm18']);
+      addCloseClassActive(btnMitosDoacaoLeite, ['.btn-02', '.btn-01'])
     });
   }
 
   
 });
+
+function addCloseClassActive(currentButton, arr) {
+  currentButton.classList.add('active');
+  arr.forEach(item => {
+    const element = getElement(item);
+    if (element) {
+      element.classList.remove('active');
+    }
+  })
+}
 
 function changeImage(src, newClasses) {
   const image = document.querySelector('.img-mapa');

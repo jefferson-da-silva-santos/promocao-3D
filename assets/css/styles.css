@@ -617,6 +617,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.desvendando__content__section--secundary .group-buttons .active {
+  transform: scale(110%) translateY(-0.5em);
+}
 .desvendando__content__section--secundary .group-buttons .btn-01 {
   background-color: rgb(181, 0, 0);
 }
@@ -1203,6 +1206,14 @@
     row-gap: 2rem;
   }
 }
+@media screen and (max-width: 770px) {
+  .desvendando__content__section--secundary .group-buttons {
+    flex-direction: column;
+  }
+  .desvendando__content__section--secundary .group-buttons__btn {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 750px) {
   .resultados__content__section--secundary {
     grid-template-columns: repeat(2, 1fr);
@@ -1343,6 +1354,9 @@
   }
   .sobre__content__section--secudary .img-2 {
     right: 34%;
+  }
+  .conatiner-option .option--primary__text {
+    font-size: 0.9em;
   }
 }
 @media screen and (max-width: 430px) {

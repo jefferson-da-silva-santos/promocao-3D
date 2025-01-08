@@ -623,12 +623,16 @@ $color-black: black;
 
         &__btn {
           border: none;
-          padding: .5em 2em;
+          padding: 0.5em 2em;
           border-radius: 10px;
           box-shadow: 6px 3px 7px 0px #00000048;
           color: white;
           cursor: pointer;
-          transition: all .3s ease;
+          transition: all 0.3s ease;
+        }
+
+        .active {
+          transform: scale(110%) translateY(-0.5em);
         }
 
         .btn-01 {
@@ -709,6 +713,7 @@ $color-black: black;
     }
   }
 }
+
 /*==================(MATERIAL)=======================*/
 .material {
   background-color: $color-white;
@@ -1276,6 +1281,16 @@ $color-black: black;
   }
 }
 
+@include media-query(770px) {
+  .desvendando__content__section--secundary .group-buttons {
+    flex-direction: column;
+  }
+
+  .desvendando__content__section--secundary .group-buttons__btn {
+    width: 100%;
+  }
+}
+
 @include media-query(750px) {
   .resultados {
     &__content {
@@ -1457,6 +1472,10 @@ $color-black: black;
       }
     }
   }
+
+  .conatiner-option .option--primary__text {
+    font-size: .9em;
+}
 }
 
 @include media-query(430px) {
