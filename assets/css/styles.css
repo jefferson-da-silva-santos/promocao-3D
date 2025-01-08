@@ -133,10 +133,10 @@
   width: 100%;
   max-width: 28em;
   transition: all 0.3s ease;
+  border-radius: 10px;
   cursor: pointer;
-}
-.hero__section--video img:hover {
-  transform: scale(106%);
+  animation: animatedBtn 8s ease 0s infinite alternate-reverse forwards;
+  transition: all 0.3s ease;
 }
 .hero__section--video .btn {
   display: flex;
@@ -149,14 +149,11 @@
   height: 3.3em;
   background-image: linear-gradient(to right, #ffffff, #ffffff);
   border-radius: 20px;
-  color: black;
+  color: rgb(74, 74, 74);
   font-weight: bold;
   box-shadow: 0px 0px 5px #5ce2e7;
   animation: animatedBtn 8s ease 0s infinite alternate-reverse forwards;
   transition: all 0.3s ease;
-}
-.hero__section--video .btn:hover {
-  transform: scale(106%);
 }
 .hero__title {
   font-family: "Josefin Sans", sans-serif;
@@ -681,18 +678,23 @@
 @keyframes animatedBtn {
   0% {
     box-shadow: 0px 0px 0ch #5ce2e7;
+    transform: scale(100%);
   }
   25% {
     box-shadow: 0px 0px 5px #5ce2e7;
+    transform: scale(103%);
   }
   50% {
     box-shadow: 0px 0px 10px #5ce2e7;
+    transform: scale(100%);
   }
   75% {
     box-shadow: 0px 0px 5px #7fda56;
+    transform: scale(103%);
   }
   100% {
     box-shadow: 0px 0px 10px #da56bd;
+    transform: scale(100%);
   }
 }
 
