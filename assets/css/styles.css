@@ -16,7 +16,7 @@
   font-family: "Muli-Light";
   src: url("../fonts/Muli-ExtraLight.ttf") format("truetype");
 }
-.contato__content__section--secundary, .contato__content__section--primary, .resultados__content__section--primary, .material__content__section--secundary, .material__content__section--primary, .desvendando__content__section--secundary__btns-2, .desvendando__content__section--secundary__btns, .desvendando__content__section--primary, .sobre__content__section, .hero__section--video, .hero__section--primary {
+.contato__content__section--secundary, .contato__content__section--primary, .resultados__content__section--primary, .material__content__section--secundary, .material__content__section--primary, .desvendando__content__section--primary, .sobre__content__section, .hero__section--video, .hero__section--primary {
   transition: all 1s ease;
 }
 
@@ -517,93 +517,53 @@
   padding-top: 4em;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5px;
-}
-.desvendando__content__section--secundary__btns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0;
 }
-.desvendando__content__section--secundary__btns .btn {
-  padding: 6px 2.5em;
-  border: 1px solid black;
-  text-transform: uppercase;
-  background-color: white;
-  border-radius: 5px;
-}
-.desvendando__content__section--secundary__btns-2 {
-  margin-top: 2em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-}
-.desvendando__content__section--secundary__btns-2 .btn {
-  padding: 5px 1.5em;
-  border: 1px solid black;
-  text-transform: uppercase;
-  background-color: white;
-}
-.desvendando__content__section--secundary__btns-2 button {
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1em;
-  padding: 5px 1.5em;
-  text-transform: uppercase;
-  box-shadow: 0px 0px 10px rgba(104, 103, 103, 0.39);
-  cursor: pointer;
-}
-.desvendando__content__section--secundary__btns-2 .btn1 {
-  background-color: #ff5656;
-}
-.desvendando__content__section--secundary__btns-2 .btn2 {
-  background-color: #7fda56;
-}
-.desvendando__content__section--secundary__btns-2 .btn3 {
-  background-color: #5ce2e7;
-}
-.desvendando__content__section--secundary__group-box {
-  width: 100%;
-  margin-top: 1em;
+.desvendando__content__section--secundary .group-image {
+  background-color: #ccc;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: normal;
-  gap: 10px;
-}
-.desvendando__content__section--secundary__group-box__box {
-  transition: all 1s ease;
-}
-.desvendando__content__section--secundary__group-box__box .question {
-  border-radius: 5px;
-  border: 1px solid rgb(231, 230, 230);
-  background-image: linear-gradient(to right, #f1f0f0, #ececec);
-  cursor: pointer;
-  padding: 1em;
-  font-family: "Muli", sans-serif;
-  font-size: 1.2em;
-}
-.desvendando__content__section--secundary__group-box__box .question .group {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 0;
+  position: relative;
 }
-.desvendando__content__section--secundary__group-box__box .question .group img {
-  width: 20px;
+.desvendando__content__section--secundary .img-mapa {
+  width: 100%;
+  max-width: 40em;
 }
-.desvendando__content__section--secundary__group-box__box .response {
-  padding: 1.5em 2em;
-  font-size: 1.2em;
-  color: rgb(41, 41, 41);
-  font-weight: 300;
+.desvendando__content__section--secundary .btn-mapa {
+  position: absolute;
+  background-color: rgba(0, 38, 255, 0.259);
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: none;
+}
+.desvendando__content__section--secundary .btn-mapa-1 {
+  top: 0;
+}
+.desvendando__content__section--secundary .btn-mapa-2 {
+  top: 15%;
+  right: 6%;
+}
+.desvendando__content__section--secundary .btn-mapa-3 {
+  bottom: 13.5%;
+  right: 9%;
+}
+.desvendando__content__section--secundary .btn-mapa-4 {
+  bottom: 0;
+  left: 38%;
+}
+.desvendando__content__section--secundary .btn-mapa-5 {
+  bottom: 16%;
+  left: 9%;
+}
+.desvendando__content__section--secundary .btn-mapa-6 {
+  top: 20%;
+  left: 7%;
 }
 
 .material {

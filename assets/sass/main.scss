@@ -211,7 +211,7 @@ $color-black: black;
   border: none;
   color: $color-white;
   width: 13.5em;
-  font-size: .9em;
+  font-size: 0.9em;
   text-align: center;
   padding: 0.7em 0;
   text-transform: uppercase;
@@ -554,88 +554,55 @@ $color-black: black;
 
     &__section--secundary {
       padding-top: 4em;
-      @include flex-box(column, flex-start, flex-start, 5px);
+      @include flex-box(column, center, center, 0);
 
-      &__btns {
-        @extend %transition-animed;
-        @include flex-box(row, space-between, center, 10px);
-
-        .btn {
-          padding: 6px 2.5em;
-          border: 1px solid black;
-          text-transform: uppercase;
-          background-color: white;
-          border-radius: 5px;
-        }
+      .group-image {
+        background-color: #ccc;
+        @include flex-box(column, center, center, 0);
+        position: relative;
       }
 
-      &__btns-2 {
-        @extend %transition-animed;
-        margin-top: 2em;
-        @include flex-box(row, space-between, center, 10px);
-
-        .btn {
-          padding: 5px 1.5em;
-          border: 1px solid black;
-          text-transform: uppercase;
-          background-color: white;
-        }
-
-        button {
-          color: $color-white;
-          border: none;
-          border-radius: 5px;
-          font-size: 1.1em;
-          padding: 5px 1.5em;
-          text-transform: uppercase;
-          box-shadow: 0px 0px 10px rgba(104, 103, 103, 0.39);
-          cursor: pointer;
-        }
-
-        .btn1 {
-          background-color: #ff5656;
-        }
-
-        .btn2 {
-          background-color: #7fda56;
-        }
-
-        .btn3 {
-          background-color: #5ce2e7;
-        }
-      }
-
-      &__group-box {
+      .img-mapa {
         width: 100%;
-        margin-top: 1em;
-        @include flex-box(column, flex-start, normal, 10px);
+        max-width: 40em;
+      }
 
-        &__box {
-          transition: all 1s ease;
-          .question {
-            border-radius: 5px;
-            border: 1px solid rgb(231, 230, 230);
-            background-image: linear-gradient(to right, #f1f0f0, #ececec);
-            cursor: pointer;
-            padding: 1em;
-            font-family: $font-body;
-            font-size: 1.2em;
-            .group {
-              @include flex-box(row, flex-start, center, 15px);
-              img {
-                width: 20px;
-              }
-            }
-          }
+      .btn-mapa {
+        position: absolute;
+        background-color: rgba(0, 38, 255, 0.259);
+        width: 10em;
+        height: 10em;
+        border-radius: 50%;
+        border: none;
+      }
 
-          .response {
-            padding: 1.5em 2em;
-            font-size: 1.2em;
-            color: rgb(41, 41, 41);
-            font-weight: 300;
-            // font-family: "Muli-Light", sans-serif;
-          }
-        }
+      .btn-mapa-1 {
+        top: 0;
+      }
+
+      .btn-mapa-2 {
+        top: 15%;
+        right: 6%;
+      }
+
+      .btn-mapa-3 {
+        bottom: 13.5%;
+        right: 9%;
+      }
+
+      .btn-mapa-4 {
+        bottom: 0;
+        left: 38%;
+      }
+
+      .btn-mapa-5 {
+        bottom: 16%;
+        left: 9%;
+      }
+
+      .btn-mapa-6 {
+        top: 20%;
+        left: 7%;
       }
     }
   }
@@ -824,7 +791,6 @@ $color-black: black;
         line-height: 1.6;
         margin-top: 1em;
         text-align: justify;
-
       }
     }
 
