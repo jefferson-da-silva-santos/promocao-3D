@@ -600,6 +600,41 @@
   width: 100%;
   max-width: 40em;
 }
+.desvendando__content__section--secundary .group-buttons {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.desvendando__content__section--secundary .group-buttons__btn {
+  border: none;
+  padding: 0.5em 2em;
+  border-radius: 10px;
+  box-shadow: 6px 3px 7px 0px rgba(0, 0, 0, 0.2823529412);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.desvendando__content__section--secundary .group-buttons .btn-01 {
+  background-color: rgb(181, 0, 0);
+}
+.desvendando__content__section--secundary .group-buttons .btn-01:hover {
+  background-color: rgb(155.5, 0, 0);
+}
+.desvendando__content__section--secundary .group-buttons .btn-02 {
+  background-color: rgb(4, 149, 197);
+}
+.desvendando__content__section--secundary .group-buttons .btn-02:hover {
+  background-color: rgb(3.4925373134, 130.0970149254, 172.0074626866);
+}
+.desvendando__content__section--secundary .group-buttons .btn-03 {
+  background-color: rgb(192, 192, 27);
+}
+.desvendando__content__section--secundary .group-buttons .btn-03:hover {
+  background-color: rgb(169.6438356164, 169.6438356164, 23.8561643836);
+}
 .desvendando__content__section--secundary .btn-mapa {
   position: absolute;
   background-color: rgba(0, 38, 255, 0.098);
@@ -710,8 +745,37 @@
   gap: 1em;
   text-align: center;
 }
+.material__content__section--secundary img {
+  width: 100%;
+  max-width: 28em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.material__content__section--secundary img:hover {
+  transform: scale(106%);
+}
 .material__content__section--secundary .link {
   color: #959595;
+}
+.material__content__section--secundary .btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 14em;
+  height: 3.3em;
+  background-image: linear-gradient(to right, #000000, #373737);
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px #5ce2e7;
+  animation: animatedBtn 8s ease 0s infinite alternate-reverse forwards;
+  transition: all 0.3s ease;
+}
+.material__content__section--secundary .btn:hover {
+  transform: scale(106%);
 }
 .material__content__section--secundary .link {
   text-decoration: underline;

@@ -95,20 +95,39 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Função responsável por abrir e fechar option
-function openCloseOption(open = true, currentClassButton = '') {
+// Função responsável por abrir e fechar option de forma assíncrona
+async function openCloseOption(open = true, currentClassButton = '') {
   const option = getElement('.conatiner-option');
   const objeAtual = arrOption.find(item => item.id === currentClassButton);
-  const title = getElement('.option--primary__title');
-  const text = getElement('.option--primary__text');
-  const image = getElement('.option--secundary__img');
 
-  option.style.display = open ? 'flex' : 'none';
-  title.textContent = open ? objeAtual.title : '';
-  text.textContent = open ? objeAtual.text : '';
-  image.setAttribute('src', open ? objeAtual.src : '');
+  if (open && objeAtual) {
+    option.style.display = 'flex';
+
+    // Atualiza título e texto imediatamente
+    getElement('.option--primary__title').textContent = objeAtual.title;
+    getElement('.option--primary__text').textContent = objeAtual.text;
+
+    // Carrega a imagem de forma assíncrona
+    const image = getElement('.option--secundary__img');
+    await loadImageAsync(objeAtual.src);
+    image.setAttribute('src', objeAtual.src);
+  } else {
+    option.style.display = 'none';
+    getElement('.option--primary__title').textContent = '';
+    getElement('.option--primary__text').textContent = '';
+    getElement('.option--secundary__img').setAttribute('src', '');
+  }
 }
 
-
+// Função para carregar uma imagem de forma assíncrona
+function loadImageAsync(src) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = resolve;
+    img.onerror = reject;
+    img.src = src;
+  });
+}
 
 // Função responsável por fechar o menu
 function openCloseMenu(visible) {
