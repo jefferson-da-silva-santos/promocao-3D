@@ -630,14 +630,20 @@
   background-color: rgb(181, 0, 0);
 }
 .desvendando__content__section--secundary .group-buttons .btn-02:hover {
-  background-color: rgb(3.4925373134, 130.0970149254, 172.0074626866);
+  background-color: rgb(155.5, 0, 0);
 }
 .desvendando__content__section--secundary .group-buttons .btn-03 {
   background-color: rgb(255, 255, 0);
   color: black;
 }
 .desvendando__content__section--secundary .group-buttons .btn-03:hover {
-  background-color: rgb(169.6438356164, 169.6438356164, 23.8561643836);
+  background-color: rgb(229.5, 229.5, 0);
+}
+.desvendando__content__section--secundary .group-buttons .btn-04 {
+  background-color: rgb(21, 128, 0);
+}
+.desvendando__content__section--secundary .group-buttons .btn-04:hover {
+  background-color: rgb(16.81640625, 102.5, 0);
 }
 .desvendando__content__section--secundary .btn-mapa {
   position: absolute;
@@ -684,6 +690,15 @@
 .desvendando__content__section--secundary .btn-mapa-6 {
   top: 20%;
   left: 7%;
+}
+.desvendando__content__section--secundary .btn-mapa-7 {
+  top: 42%;
+  left: 5%;
+  display: none;
+}
+.desvendando__content__section--secundary .btn-mapa-8 {
+  right: 4%;
+  display: none;
 }
 
 /*==================(MATERIAL)=======================*/

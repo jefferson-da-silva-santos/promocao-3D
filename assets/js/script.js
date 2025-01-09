@@ -106,6 +106,55 @@ const arrOption = [
     title: 'Seios caem com a lactação',
     text: 'Mito, pois o que provoca a flacidez dos seios é a genética, o envelhecimento e fatores como o ganho de peso, não a amamentação. Pelo contrário, o ato de amamentar traz benefícios à saúde da mulher, reduzindo o risco de câncer de mama e ovário​​.',
     src: 'assets/image/seios caem.webp'
+  },
+  {
+    id: 'm19',
+    title: 'Órgãos podem ser vendidos após a morte do meu familiar',
+    text: 'Mito, pois o processo de doação é rigorosamente regulamentado por lei e fiscalizado por autoridades de saúde, garantindo segurança e ética.',
+    src: 'assets/image/imagemTecidos-1.webp'
+  },
+  {
+    id: 'm20',
+    title: 'Idosos não podem doar',
+    text: 'Mito, pois a idade não é fator impeditivo para a doação; o que importa é a condição de saúde do órgão no momento da doação.',
+    src: 'assets/image/imagemTecidos-2.webp'
+  },
+  {
+    id: 'm21',
+    title: 'Confundir morte encefálica com o estado de coma',
+    text: 'Mito, pois morte encefálica é irreversível, enquanto o coma é um estado em que há possibilidade de recuperação, conforme critérios médicos.',
+    src: 'assets/image/imagemTecidos-3.webp'
+  },
+  {
+    id: 'm22',
+    title: 'É necessário custo para doação',
+    text: 'Mito, pois todos os procedimentos relacionados à doação e ao transplante são gratuitos e custeados pelo sistema público de saúde.',
+    src: 'assets/image/imagemTecidos-4.webp'
+  },
+  {
+    id: 'm23',
+    title: 'Preferência na fila de espera',
+    text: 'Mito, pois a fila é única e regulamentada por critérios técnicos de compatibilidade e urgência, sem qualquer privilégio pessoal.',
+    src: 'assets/image/imagemTecidos-5.webp'
+  },
+  {
+    id: 'm24',
+    title: 'Doação desfigura o corpo',
+    text: 'Mito, pois os procedimentos são realizados com respeito ao corpo, preservando sua aparência, garantindo dignidade e respeito à família.',
+    src: 'assets/image/imagemTecidos-6.webp'
+  },
+  
+  {
+    id: 'm25',
+    title: 'Se estiver internado posso correr risco de morrer para que ocorra a doação de órgãos',
+    text: 'Mito, pois a prioridade de médicos e hospitais é salvar vidas, e a doação só é considerada após o diagnóstico de morte encefálica.',
+    src: 'assets/image/imagemTecidos-7.webp'
+  },
+  {
+    id: 'm26',
+    title: 'Pessoas com histórico de doenças não podem fazer doação',
+    text: 'Mito, pois cada caso é avaliado individualmente, e algumas doenças não impedem a doação, dependendo da saúde do órgão.',
+    src: 'assets/image/imagemTecidos-8.webp'
   }
 ]
 
@@ -169,7 +218,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnMitosDoacaoSangue) {
     btnMitosDoacaoSangue.addEventListener('click', () => {
       changeImage('assets/image/mapa mitos doacao de sangue.jpeg', ['m1', 'm2', 'm3', 'm4', 'm5', 'm6']);
-      addCloseClassActive(btnMitosDoacaoSangue, ['.btn-02', '.btn-03']);
+      addCloseClassActive(btnMitosDoacaoSangue, ['.btn-02', '.btn-03', '.btn-04']);
+      hideButtons(false);
     });
   }
 
@@ -177,7 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnMedosDoacaoSangue) {
     btnMedosDoacaoSangue.addEventListener('click', () => {
       changeImage('assets/image/mapa medos doacao de sangue.jpeg', ['m7', 'm8', 'm9', 'm10', 'm11', 'm12']);
-      addCloseClassActive(btnMedosDoacaoSangue, ['.btn-03', '.btn-01']);
+      addCloseClassActive(btnMedosDoacaoSangue, ['.btn-03', '.btn-01', '.btn-04']);
+      hideButtons(false);
     });
   }
 
@@ -185,12 +236,32 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnMitosDoacaoLeite) {
     btnMitosDoacaoLeite.addEventListener('click', () => {
       changeImage('assets/image/mapa mitos doacao de leite materno.jpeg', ['m13', 'm14', 'm15', 'm16', 'm17', 'm18']);
-      addCloseClassActive(btnMitosDoacaoLeite, ['.btn-02', '.btn-01'])
+      addCloseClassActive(btnMitosDoacaoLeite, ['.btn-02', '.btn-01', '.btn-04']);
+      hideButtons(false);
+    });
+  }
+
+
+  const btnMitosDoacaOrgaos = getElement('.btn-04');
+  if (btnMitosDoacaOrgaos) {
+    btnMitosDoacaOrgaos.addEventListener('click', () => {
+      changeImage('assets/image/mapa mitos doação de tecidos.jpeg', ['m19', 'm20', 'm22', 'm23', 'm24', 'm26']);
+      addCloseClassActive(btnMitosDoacaOrgaos, ['.btn-02', '.btn-01', '.btn-03']);
+      hideButtons(true);
     });
   }
 
   
 });
+
+function hideButtons(show) {
+  const btn7 = getElement('.btn-mapa-7');
+  const btn8 = getElement('.btn-mapa-8');
+  btn7.style.display = show ? 'inline-block' : 'none';
+  btn8.style.display = show ? 'inline-block' : 'none';
+  getElement('.btn-mapa-6').style.top = show ? '6%' : '20%';
+  getElement('.btn-mapa-6').style.left = show ? '5%' : '7%';
+}
 
 function addCloseClassActive(currentButton, arr) {
   currentButton.classList.add('active');
