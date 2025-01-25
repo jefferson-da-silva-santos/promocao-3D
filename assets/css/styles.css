@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap");
 * {
   margin: 0;
@@ -16,7 +17,7 @@
   font-family: "Muli-Light";
   src: url("../fonts/Muli-ExtraLight.ttf") format("truetype");
 }
-.contato__content__section--secundary, .contato__content__section--primary, .resultados__content__section--primary, .material__content__section--secundary, .material__content__section--primary, .desvendando__content__section--primary, .sobre__content__section, .hero__section--video, .hero__section--primary {
+.contato__content__section--secundary, .contato__content__section--primary, .resultados__content__section--primary, .material__content__section--secundary, .material__content__section--primary, .informacoes__content--primary, .desvendando__content__section--primary, .sobre__content__section, .hero__section--video, .hero__section--primary {
   transition: all 1s ease;
 }
 
@@ -699,6 +700,147 @@
 .desvendando__content__section--secundary .btn-mapa-8 {
   right: 4%;
   display: none;
+}
+
+/*============(INFORMAÇÕES)============*/
+.informacoes {
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 4em 0;
+}
+.informacoes__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10em 1fr;
+  width: 95%;
+  max-width: 1080px;
+  margin: auto;
+  row-gap: 1.5rem;
+  padding-bottom: 1rem;
+}
+.informacoes__content--primary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+.informacoes__content--primary .group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 7px;
+  margin-bottom: 15px;
+}
+.informacoes__content--primary .group img {
+  max-width: 20px;
+}
+.informacoes__content--primary__suptitle {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: -1px;
+  color: black;
+  font-weight: 300;
+}
+.informacoes__content--primary__title {
+  color: black;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.informacoes__content--secundary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.informacoes__content--secundary__card {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.564);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  flex-basis: 20em;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 0;
+  row-gap: 0;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.informacoes__content--secundary__card__title {
+  max-width: 9em;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.5;
+}
+.informacoes__content--secundary__card__text {
+  max-width: 180px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #ffffff;
+}
+.informacoes__content--secundary__card .img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  height: 100%;
+}
+.informacoes__content--secundary__card .text {
+  background-image: linear-gradient(to right, #185c37, #79a68e);
+  padding: 1em 2em 2em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+}
+.informacoes__content--secundary .card1,
+.informacoes__content--secundary .card3 {
+  height: 23em;
+}
+.informacoes__content--secundary .card1 .text {
+  background-image: linear-gradient(to right, #9c7d0d, rgb(242.5, 212.6923076923, 105));
+}
+.informacoes__content--secundary .card1 .img {
+  padding: 1em 1em 2em 1em;
+}
+.informacoes__content--secundary .card1 .img img {
+  max-width: 7.3em;
+}
+.informacoes__content--secundary .card2 {
+  height: 26em;
+}
+.informacoes__content--secundary .card2 .text {
+  background-image: linear-gradient(to right, #a70e16, rgb(243.3591160221, 116.1408839779, 122.7928176796));
+}
+.informacoes__content--secundary .card2 .img img {
+  max-width: 9em;
+}
+.informacoes__content--secundary .card3 .text {
+  background-image: linear-gradient(to right, #1f7699, rgb(132.3505434783, 202.0923913043, 230.1494565217));
+}
+.informacoes__content--secundary .card3 .img img {
+  max-width: 7.5em;
 }
 
 /*==================(MATERIAL)=======================*/
