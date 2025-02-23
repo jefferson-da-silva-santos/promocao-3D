@@ -312,19 +312,6 @@
   width: 100%;
   height: 100%;
 }
-.video__play {
-  width: 85px;
-  height: 85px;
-  border: 2px solid white;
-  background-color: rgba(0, 0, 0, 0.25);
-  border-radius: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  animation: playVideo 5s ease 0s infinite normal forwards;
-}
 @keyframes playVideo {
   0% {
     transform: scale(100%);
@@ -535,7 +522,7 @@
   justify-content: center;
   align-items: center;
   gap: 0;
-  padding: 4em 0;
+  padding: 3em 0;
 }
 .desvendando__content {
   display: grid;
@@ -980,12 +967,11 @@
   margin: auto;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 13em 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   z-index: 2;
   min-height: 100vh;
-  gap: 3em;
-  padding-bottom: 3em;
+  column-gap: 2rem;
 }
 .resultados__content .group-text-local {
   display: flex;
@@ -1003,51 +989,86 @@
   color: white;
   text-align: center;
 }
-.resultados__content__section--primary .group {
+.resultados__content__section--secundary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.resultados__content__section--secundary .group {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-end;
   gap: 7px;
   margin: auto;
   margin-bottom: 1em;
 }
-.resultados__content__section--primary .group img {
+.resultados__content__section--secundary .group img {
   max-width: 20px;
 }
-.resultados__content__section--primary__suptitle {
+.resultados__content__section--secundary__suptitle {
   font-size: 1em;
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
   letter-spacing: -1px;
   font-weight: 300;
+  color: white;
 }
-.resultados__content__section--primary__title {
+.resultados__content__section--secundary__title {
   font-family: "Josefin Sans", sans-serif;
   font-size: 3rem;
   font-weight: 300;
+  color: white;
   line-height: 1;
   margin: 0 auto;
   text-transform: uppercase;
 }
-.resultados__content__section--primary__text {
-  color: rgb(185, 185, 185);
+.resultados__content__section--secundary__text {
+  color: rgb(255, 255, 255);
   font-family: "Muli-Light", sans-serif;
   font-size: 15px;
   line-height: 1.6;
   margin-top: 1em;
   text-align: justify;
 }
-.resultados__content__section--secundary {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  column-gap: 1em;
+.resultados__content__section--secundary .buttons-video {
+  display: flex;
+  margin-top: 2rem;
+  gap: 2rem;
 }
-.resultados__content__section--secundary p {
+.resultados__content__section--secundary .buttons-video__next {
+  background-color: transparent;
   color: white;
-  text-align: justify;
-  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 0 2rem;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+.resultados__content__section--secundary .buttons-video button {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: all 0.3s ease;
+}
+.resultados__content__section--secundary .buttons-video button i {
+  color: white;
+}
+.resultados__content__section--secundary .buttons-video button:hover {
+  transform: scale(110%);
 }
 .resultados .box {
   position: absolute;
@@ -1241,10 +1262,13 @@
     display: inline-block;
   }
   .video {
-    width: 500px;
+    width: 100%;
   }
 }
 @media screen and (max-width: 960px) {
+  .hero {
+    padding-bottom: 4rem;
+  }
   .hero__content {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -1335,22 +1359,43 @@
     margin: auto;
     margin-top: 3em;
   }
+  .informacoes__content--secundary {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .informacoes__content--secundary__card {
+    max-width: 20rem;
+    width: 100%;
+    margin: auto;
+  }
+  .resultados {
+    padding: 3rem 0 0rem 0;
+  }
+  .resultados__content {
+    padding-top: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 22rem 28rem;
+  }
+  .resultados__content__section--secundary .group {
+    justify-content: center;
+  }
+  .resultados__content__section--secundary__title {
+    text-align: center;
+  }
+  .resultados__content__section--secundary .buttons-video {
+    margin: auto;
+    margin-top: 1rem;
+  }
+  .resultados__content__section--primary {
+    grid-row: 2/2;
+  }
 }
 @media screen and (max-width: 943px) {
   .desvendando__content__section--secundary__btns-2 button {
     font-size: 0.8em;
     padding: 10px 1.5em;
     box-shadow: 0px 0px 10px rgba(104, 103, 103, 0.17);
-  }
-}
-@media screen and (max-width: 900px) {
-  .resultados__content {
-    grid-template-rows: 14em 1fr;
-  }
-}
-@media screen and (max-width: 850px) {
-  .resultados__content__section--secundary {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (max-width: 798px) {
@@ -1373,9 +1418,6 @@
   }
 }
 @media screen and (max-width: 750px) {
-  .resultados__content__section--secundary {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .sobre__content__section__title,
   .desvendando__content__section--primary__title,
   .material__content__section--primary__title,
@@ -1445,16 +1487,9 @@
   }
 }
 @media screen and (max-width: 480px) {
-  .video__play {
-    width: 75px;
-    height: 75px;
-  }
   .video__icon {
     width: 34px;
     margin-left: 6px;
-  }
-  .hero .video {
-    height: 12em;
   }
   .hero__content {
     min-height: 48em;
@@ -1463,24 +1498,6 @@
     margin-top: 0;
     text-align: start;
     font-size: 1.3em;
-  }
-  .resultados__content__section--secundary {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .resultados__content__section--secundary .card-location {
-    display: grid;
-    grid-template-columns: 8em 2fr;
-    column-gap: 20px;
-    height: max-content;
-    padding: 10px;
-  }
-  .resultados__content__section--secundary .card-location .group-text-local {
-    align-items: baseline;
-    margin-bottom: 2em;
-  }
-  .resultados__content__section--secundary .card-location iframe {
-    max-width: 130px;
-    height: 130px;
   }
   .sobre__content__section__title,
   .desvendando__content__section--primary__title,

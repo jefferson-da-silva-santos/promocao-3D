@@ -143,7 +143,7 @@ const arrOption = [
     text: 'Mito, pois os procedimentos são realizados com respeito ao corpo, preservando sua aparência, garantindo dignidade e respeito à família.',
     src: 'assets/image/imagemTecidos-6.webp'
   },
-  
+
   {
     id: 'm25',
     title: 'Se estiver internado posso correr risco de morrer para que ocorra a doação de órgãos',
@@ -159,16 +159,11 @@ const arrOption = [
 ]
 
 let isMenuVisible = false;
+let isPrimaryVideoVisible = false;
+let isSecundaryVideoVisible = false;
 
 document.addEventListener('DOMContentLoaded', () => {
-  const boxVideo = getElement('.video');
   const arrButtonsOption = Array.from(getElement('.btn-mapa', true));
-
-  if (boxVideo) {
-    boxVideo.addEventListener('click', () => {
-      handlerClickBoxVideo(boxVideo);
-    });
-  }
 
 
   // menu
@@ -251,8 +246,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  
+  const btnVideo1 = getElement('.btn-video-1');
+  if (btnVideo1) {
+    btnVideo1.addEventListener('click', () => {
+      handleVideos(1);
+    })
+  }
+
+  const btnVideo2 = getElement('.btn-video-2');
+  if (btnVideo2) {
+    btnVideo2.addEventListener('click', () => {
+      handleVideos(2);
+    })
+  }
 });
+
+// Função de alterar vídeo
+function handleVideos(video = 1) {
+  const divVideo = getElement('.video');
+  const descriptionVideo = getElement('.resultados__content__section--secundary__text');
+  if (video === 1 && !isPrimaryVideoVisible) {
+    divVideo.innerHTML = `<iframe allow="encrypted-media; accelerometer; clipboard-write; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/iZwb0yh2klk?si=Qhwv_mt5CqlOvGBr" 
+        title="YouTube video player" 
+        frameborder="0" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+</iframe>`;
+    descriptionVideo.textContent = `PL110/2024, Deputado Federal Eduardo da Fonte, Institui o Programa
+              de Ensino e Conscientização sobre Doação de Sangue, Doação de
+              Órgãos/Tecidos e Doação de Leite Materno – Promoção 3D no
+              currículo escolar e acadêmico brasileiro.`;
+    isPrimaryVideoVisible = true;
+    isSecundaryVideoVisible = false;
+  } else if (video === 2 && !isSecundaryVideoVisible) {
+    divVideo.innerHTML = `<video width="100%" height="360" controls>
+                <source src="assets/video/video-pro.mp4" type="video/mp4" />
+                Seu navegador não suporta a tag de vídeo.
+              </video>`;
+    isSecundaryVideoVisible = true;
+    isPrimaryVideoVisible = false;
+    descriptionVideo.textContent = `Dr. e Vereador Cristiano Teixeira Dantas, durante a sessão
+              aprensenta PROJETO DE LEI 004/2024, Com o objetivo de istituir a
+              Política de Conscientização e Incentivo da Doação de Sangue,
+              Órgãos, Tecidos Leite Materno - Promoção 3D, no Município de
+              Custódia.`
+  }
+}
 
 function hideButtons(show) {
   const btn7 = getElement('.btn-mapa-7');
@@ -328,22 +368,6 @@ function openCloseMenu(visible) {
   listMenu.style.display = visible ? 'none' : 'flex';
   btnMenu.setAttribute('src', visible ? 'assets/image/menu-humburguer.png' : 'assets/image/cross.png');
   isMenuVisible = toggleVariable(isMenuVisible);
-}
-
-// Função para adicionar e remover o frame do vídeo ao box
-function handlerClickBoxVideo(box, frame = true) {
-  box.innerHTML = frame
-    ? `<iframe 
-        allow="autoplay; encrypted-media; accelerometer; clipboard-write; gyroscope; picture-in-picture; web-share" 
-        src="https://www.youtube.com/embed/iZwb0yh2klk?autoplay=1&si=Qhwv_mt5CqlOvGBr" 
-        title="YouTube video player" 
-        frameborder="0" 
-        referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen>
-      </iframe>`
-    : `<div class="video__play">
-        <img class="video__icon" src="assets/image/botao-play.png" alt="Play button" />
-      </div>`;
 }
 
 // Função de alternar valores booleanos de variáveis
