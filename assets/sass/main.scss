@@ -1491,6 +1491,19 @@ $color-black: black;
     grid-template-rows: 1fr 24em;
     grid-template-columns: 1fr;
   }
+
+  .conatiner-option .option--primary__title {
+    text-align: center;
+  }
+
+  .conatiner-option .option--primary__group-text {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .conatiner-option .option--primary i {
+    display: none;
+  }
 }
 
 @include media-query(782px) {
@@ -1587,10 +1600,6 @@ $color-black: black;
     font-size: 2em;
   }
 
-  .conatiner-option .option--primary__group-text {
-    grid-template-columns: 3.2em 1fr;
-  }
-
   .conatiner-option .option {
     grid-template-rows: 1fr 20em;
     row-gap: 2em;
@@ -1675,10 +1684,7 @@ $color-black: black;
 
   .conatiner-option .option {
     grid-template-rows: 1fr 18em;
-    row-gap: 1em;
-  }
-  .conatiner-option .option--primary__group-text {
-    grid-template-columns: 3em 1fr;
+    row-gap: 3em;
   }
 }
 
