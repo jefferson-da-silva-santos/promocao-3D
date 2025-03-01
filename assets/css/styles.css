@@ -806,7 +806,7 @@
   height: 23em;
 }
 .informacoes__content--secundary .card1 .text {
-  background-image: linear-gradient(to right, #9c7d0d, rgb(242.5, 212.6923076923, 105));
+  background-image: linear-gradient(to right, #619b3b, #98C289);
 }
 .informacoes__content--secundary .card1 .img {
   padding: 1em 1em 2em 1em;
@@ -824,7 +824,7 @@
   max-width: 9em;
 }
 .informacoes__content--secundary .card3 .text {
-  background-image: linear-gradient(to right, #1f7699, rgb(132.3505434783, 202.0923913043, 230.1494565217));
+  background-image: linear-gradient(to right, #cda625, rgb(224.2716981132, 205.2924528302, 142.0283018868));
 }
 .informacoes__content--secundary .card3 .img img {
   max-width: 7.5em;
