@@ -101,7 +101,7 @@
   background-color: rgba(6, 6, 6, 0.42);
   position: fixed;
   top: 0;
-  height: 3em;
+  height: 4em;
   backdrop-filter: blur(8px);
   z-index: 3;
   width: 100%;
@@ -158,7 +158,7 @@
 /* ========== Hero Section ========== */
 .hero {
   position: relative;
-  background-image: url("../image/fundo2.webp");
+  background-image: url("../image/fundo2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -169,7 +169,7 @@
   top: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.631);
+  background-color: rgba(0, 0, 0, 0.678);
   z-index: 0;
 }
 .hero__content {
@@ -215,14 +215,15 @@
   align-items: center;
   gap: 0;
   width: 100%;
-  max-width: 14em;
-  height: 3.3em;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  max-width: max-content;
+  height: 3em;
   background-image: linear-gradient(to right, #ffffff, #ffffff);
-  border-radius: 20px;
+  border-radius: 30px;
   color: rgb(74, 74, 74);
   font-weight: bold;
   box-shadow: 0px 0px 5px #5ce2e7;
-  animation: animatedBtn 8s ease 0s infinite alternate-reverse forwards;
   transition: all 0.3s ease;
 }
 .hero__title {
@@ -955,7 +956,7 @@
 /*==================(RESULTADOS)===================*/
 .resultados {
   position: relative;
-  background-image: url("../image/fundo2.webp");
+  background-image: url("../image/fundo2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
