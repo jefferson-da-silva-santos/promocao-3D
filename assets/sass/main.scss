@@ -838,11 +838,7 @@ $color-black: black;
 
       .card1 {
         .text {
-          background-image: linear-gradient(
-            to right,
-            #619b3b,
-            #98C289
-          );
+          background-image: linear-gradient(to right, #619b3b, #98c289);
         }
         .img {
           padding: 1em 1em 2em 1em;
@@ -873,7 +869,7 @@ $color-black: black;
           background-image: linear-gradient(
             to right,
             #cda625,
-            lighten(#DDC882, 3%)
+            lighten(#ddc882, 3%)
           );
         }
         .img {
@@ -999,6 +995,106 @@ $color-black: black;
         100% {
           box-shadow: 0px 0px 10px #da56bd;
           transform: scale(100%);
+        }
+      }
+    }
+  }
+}
+
+/*==================(Audiência)=======================*/
+
+.audiencia {
+  position: relative;
+  background-image: url("../image/fundo2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    z-index: 0;
+  }
+
+  &__content {
+    @include flex-box(column, center, center, 2rem);
+    max-width: 1080px;
+    width: 95%;
+    padding: 2rem 0;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+
+    &--primary {
+      @include flex-box(column, center, center, 0.5rem);
+      text-align: center;
+      .group-sup-img {
+        @include flex-box(row, center, center, 0);
+        img {
+          max-width: 20px;
+        }
+        margin-bottom: 15px;
+      }
+
+      &__suptitle {
+        font-size: 1em;
+        text-transform: uppercase;
+        font-family: $font-secund;
+        letter-spacing: -1px;
+        color: $color-white;
+        font-weight: 300;
+      }
+
+      &__title {
+        color: $color-white;
+        font-family: $font-secund;
+        font-size: 3rem;
+        max-width: 600px;
+        font-weight: 300;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+    }
+
+    &--secundary {
+      width: 100%;
+      max-width: 80rem;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 8/4;
+        border-radius: 10px;
+      }
+
+      .buttons_audiencia {
+        @include flex-box(row, center, center, 1.5rem);
+        margin-top: 1rem;
+        
+        button {
+          @include flex-box(row, center, center, 0);
+          cursor: pointer;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          background-color: $color-white;
+          border: none;
+
+          i {
+            font-size: 2rem;
+            transition: all 0.3s ease;
+            color: #d0a97c;
+            margin-bottom: 3px;
+
+            &:hover {
+              color: darken(#d0a97c, 10%);
+            }
+          }
         }
       }
     }

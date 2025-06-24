@@ -807,7 +807,7 @@
   height: 23em;
 }
 .informacoes__content--secundary .card1 .text {
-  background-image: linear-gradient(to right, #619b3b, #98C289);
+  background-image: linear-gradient(to right, #619b3b, #98c289);
 }
 .informacoes__content--secundary .card1 .img {
   padding: 1em 1em 2em 1em;
@@ -951,6 +951,114 @@
     box-shadow: 0px 0px 10px #da56bd;
     transform: scale(100%);
   }
+}
+
+/*==================(Audiência)=======================*/
+.audiencia {
+  position: relative;
+  background-image: url("../image/fundo2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+.audiencia__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.678);
+  z-index: 0;
+}
+.audiencia__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1080px;
+  width: 95%;
+  padding: 2rem 0;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+}
+.audiencia__content--primary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+.audiencia__content--primary .group-sup-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 15px;
+}
+.audiencia__content--primary .group-sup-img img {
+  max-width: 20px;
+}
+.audiencia__content--primary__suptitle {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: -1px;
+  color: white;
+  font-weight: 300;
+}
+.audiencia__content--primary__title {
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  max-width: 600px;
+  font-weight: 300;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.audiencia__content--secundary {
+  width: 100%;
+  max-width: 80rem;
+}
+.audiencia__content--secundary iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 8/4;
+  border-radius: 10px;
+}
+.audiencia__content--secundary .buttons_audiencia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.audiencia__content--secundary .buttons_audiencia button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+}
+.audiencia__content--secundary .buttons_audiencia button i {
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  color: #d0a97c;
+  margin-bottom: 3px;
+}
+.audiencia__content--secundary .buttons_audiencia button i:hover {
+  color: rgb(194.5337078652, 144.3595505618, 86.4662921348);
 }
 
 /*==================(RESULTADOS)===================*/
