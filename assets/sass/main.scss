@@ -752,7 +752,7 @@ $color-black: black;
       }
     }
 
-     &__section--secundary-jogo {
+    &__section--secundary-jogo {
       padding-top: 2em;
       @include flex-box(column, center, center, 0);
 
@@ -1265,18 +1265,16 @@ $color-black: black;
       .buttons_audiencia {
         @include flex-box(row, center, center, 1.5rem);
         margin-top: 1rem;
-        
+
         button {
           @include flex-box(row, center, center, 0);
           cursor: pointer;
           width: max-content;
-          padding: .4rem 2rem;
+          padding: 0.4rem 2rem;
           border-radius: 10px;
           background-color: #cda625;
           color: $color-white;
           border: none;
-          font-weight: 600;
-          font-size: 1.1rem;
         }
       }
     }
@@ -1841,6 +1839,18 @@ $color-black: black;
     right: 34%;
   }
 
+  .audiencia__content--secundary iframe {
+    aspect-ratio: 5 / 5;
+  }
+
+  .audiencia__content--secundary .buttons_audiencia {
+    button {
+      font-size: 0.9rem;
+      padding: 10px 0.5em;
+      height: auto;
+    }
+  }
+
   .desvendando__content__section--secundary .btn-mapa {
     width: 8em;
     height: 8em;
@@ -1931,6 +1941,10 @@ $color-black: black;
   .hero__content {
     min-height: 54em;
   }
+
+  .audiencia__content--secundary iframe {
+    aspect-ratio: 4 / 5;
+  }
 }
 
 @include media-query(458px) {
@@ -1985,6 +1999,12 @@ $color-black: black;
   .button--highlight {
     max-width: 15em;
   }
+}
+
+@include media-query(380px) {
+      .audiencia__content--secundary iframe {
+        aspect-ratio: 3 / 5;
+    }
 }
 
 @include media-query(376px) {

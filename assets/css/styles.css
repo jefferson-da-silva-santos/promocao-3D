@@ -1244,8 +1244,6 @@
   background-color: #cda625;
   color: white;
   border: none;
-  font-weight: 600;
-  font-size: 1.1rem;
 }
 
 /*==================(RESULTADOS)===================*/
@@ -1757,6 +1755,14 @@
   .sobre__content__section--secudary .img-2 {
     right: 34%;
   }
+  .audiencia__content--secundary iframe {
+    aspect-ratio: 5/5;
+  }
+  .audiencia__content--secundary .buttons_audiencia button {
+    font-size: 0.9rem;
+    padding: 10px 0.5em;
+    height: auto;
+  }
   .desvendando__content__section--secundary .btn-mapa {
     width: 8em;
     height: 8em;
@@ -1830,6 +1836,9 @@
   .hero__content {
     min-height: 54em;
   }
+  .audiencia__content--secundary iframe {
+    aspect-ratio: 4/5;
+  }
 }
 @media screen and (max-width: 458px) {
   .sobre {
@@ -1872,6 +1881,11 @@
   }
   .button--highlight {
     max-width: 15em;
+  }
+}
+@media screen and (max-width: 380px) {
+  .audiencia__content--secundary iframe {
+    aspect-ratio: 3/5;
   }
 }
 @media screen and (max-width: 376px) {
