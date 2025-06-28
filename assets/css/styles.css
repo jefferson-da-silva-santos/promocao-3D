@@ -589,6 +589,20 @@
   width: 100%;
   max-width: 40em;
 }
+.desvendando__content__section--secundary .galeria-jogo-da-vida {
+  width: 100%;
+  max-width: 40em;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  column-gap: normal;
+  row-gap: normal;
+}
+.desvendando__content__section--secundary .galeria-jogo-da-vida img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .desvendando__content__section--secundary .group-buttons {
   margin-top: 5rem;
   display: flex;
@@ -633,6 +647,28 @@
 }
 .desvendando__content__section--secundary .group-buttons .btn-04:hover {
   background-color: rgb(16.81640625, 102.5, 0);
+}
+.desvendando__content__section--secundary .buttons-jogo-da-vida {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.desvendando__content__section--secundary .buttons-jogo-da-vida .btn-jogo-da-vida {
+  border: none;
+  padding: 0.5em 2em;
+  border-radius: 10px;
+  box-shadow: 6px 3px 7px 0px rgba(0, 0, 0, 0.2823529412);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: rgb(0, 0, 151);
+}
+.desvendando__content__section--secundary .buttons-jogo-da-vida .active {
+  transform: scale(110%) translateY(-0.5em);
+  background-color: #0000fd;
 }
 .desvendando__content__section--secundary .btn-mapa {
   position: absolute;
@@ -686,6 +722,163 @@
   display: none;
 }
 .desvendando__content__section--secundary .btn-mapa-8 {
+  right: 4%;
+  display: none;
+}
+.desvendando__content__section--secundary-jogo {
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.desvendando__content__section--secundary-jogo .group-image {
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+.desvendando__content__section--secundary-jogo .img-mapa {
+  width: 100%;
+  max-width: 40em;
+}
+.desvendando__content__section--secundary-jogo .galeria-jogo-da-vida {
+  width: 100%;
+  max-width: 40em;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  column-gap: normal;
+  row-gap: normal;
+}
+.desvendando__content__section--secundary-jogo .galeria-jogo-da-vida img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.desvendando__content__section--secundary-jogo .group-buttons {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.desvendando__content__section--secundary-jogo .group-buttons__btn {
+  border: none;
+  padding: 0.5em 2em;
+  border-radius: 10px;
+  box-shadow: 6px 3px 7px 0px rgba(0, 0, 0, 0.2823529412);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.desvendando__content__section--secundary-jogo .group-buttons .active {
+  transform: scale(110%) translateY(-0.5em);
+}
+.desvendando__content__section--secundary-jogo .group-buttons .btn-01 {
+  background-color: rgb(181, 0, 0);
+}
+.desvendando__content__section--secundary-jogo .group-buttons .btn-01:hover {
+  background-color: rgb(155.5, 0, 0);
+}
+.desvendando__content__section--secundary-jogo .group-buttons .btn-02 {
+  background-color: rgb(181, 0, 0);
+}
+.desvendando__content__section--secundary-jogo .group-buttons .btn-02:hover {
+  background-color: rgb(155.5, 0, 0);
+}
+.desvendando__content__section--secundary-jogo .group-buttons .btn-03 {
+  background-color: rgb(255, 255, 0);
+  color: black;
+}
+.desvendando__content__section--secundary-jogo .group-buttons .btn-03:hover {
+  background-color: rgb(229.5, 229.5, 0);
+}
+.desvendando__content__section--secundary-jogo .group-buttons .btn-04 {
+  background-color: rgb(21, 128, 0);
+}
+.desvendando__content__section--secundary-jogo .group-buttons .btn-04:hover {
+  background-color: rgb(16.81640625, 102.5, 0);
+}
+.desvendando__content__section--secundary-jogo .buttons-jogo-da-vida {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.desvendando__content__section--secundary-jogo .buttons-jogo-da-vida .btn-jogo-da-vida {
+  border: none;
+  padding: 0.5em 2em;
+  border-radius: 10px;
+  box-shadow: 6px 3px 7px 0px rgba(0, 0, 0, 0.2823529412);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: rgb(0, 0, 151);
+}
+.desvendando__content__section--secundary-jogo .buttons-jogo-da-vida .active {
+  transform: scale(110%) translateY(-0.5em);
+  background-color: #0000fd;
+}
+.desvendando__content__section--secundary-jogo .btn-mapa {
+  position: absolute;
+  background-color: rgba(0, 38, 255, 0.098);
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 900;
+  animation: buttonMapa 2s ease 0s infinite normal forwards;
+}
+@keyframes buttonMapa {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(110%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+.desvendando__content__section--secundary-jogo .btn-mapa-1 {
+  top: 0;
+  cursor: pointer;
+}
+.desvendando__content__section--secundary-jogo .btn-mapa-2 {
+  top: 15%;
+  right: 6%;
+}
+.desvendando__content__section--secundary-jogo .btn-mapa-3 {
+  bottom: 13.5%;
+  right: 9%;
+}
+.desvendando__content__section--secundary-jogo .btn-mapa-4 {
+  bottom: 0;
+  left: 38%;
+}
+.desvendando__content__section--secundary-jogo .btn-mapa-5 {
+  bottom: 16%;
+  left: 9%;
+}
+.desvendando__content__section--secundary-jogo .btn-mapa-6 {
+  top: 20%;
+  left: 7%;
+}
+.desvendando__content__section--secundary-jogo .btn-mapa-7 {
+  top: 42%;
+  left: 5%;
+  display: none;
+}
+.desvendando__content__section--secundary-jogo .btn-mapa-8 {
   right: 4%;
   display: none;
 }
@@ -1027,7 +1220,7 @@
 .audiencia__content--secundary iframe {
   width: 100%;
   height: 100%;
-  aspect-ratio: 8/4;
+  aspect-ratio: 20/10;
   border-radius: 10px;
 }
 .audiencia__content--secundary .buttons_audiencia {
@@ -1045,20 +1238,14 @@
   align-items: center;
   gap: 0;
   cursor: pointer;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: white;
+  width: max-content;
+  padding: 0.4rem 2rem;
+  border-radius: 10px;
+  background-color: #cda625;
+  color: white;
   border: none;
-}
-.audiencia__content--secundary .buttons_audiencia button i {
-  font-size: 2rem;
-  transition: all 0.3s ease;
-  color: #d0a97c;
-  margin-bottom: 3px;
-}
-.audiencia__content--secundary .buttons_audiencia button i:hover {
-  color: rgb(194.5337078652, 144.3595505618, 86.4662921348);
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 /*==================(RESULTADOS)===================*/
@@ -1529,10 +1716,12 @@
   }
 }
 @media screen and (max-width: 770px) {
-  .desvendando__content__section--secundary .group-buttons {
+  .desvendando__content__section--secundary .group-buttons,
+  .desvendando__content__section--secundary-jogo .buttons-jogo-da-vida {
     flex-direction: column;
   }
-  .desvendando__content__section--secundary .group-buttons__btn {
+  .desvendando__content__section--secundary .group-buttons__btn,
+  .desvendando__content__section--secundary-jogo .buttons-jogo-da-vida {
     width: 100%;
   }
 }
@@ -1541,7 +1730,9 @@
   .desvendando__content__section--primary__title,
   .material__content__section--primary__title,
   .resultados__content__section--primary__title,
-  .contato__content__section--primary__title {
+  .contato__content__section--primary__title,
+  .desvendando__content__section--primary__title,
+  .audiencia__content--primary__title {
     font-size: 2.5em;
   }
 }
@@ -1594,7 +1785,9 @@
   .hero__content {
     min-height: 60em;
   }
-  .conatiner-option .option--primary__title {
+  .conatiner-option .option--primary__title,
+  .desvendando__content__section--primary__title,
+  .audiencia__content--primary__title {
     font-size: 2em;
   }
   .conatiner-option .option {
@@ -1620,7 +1813,9 @@
   .material__content__section--primary__title,
   .resultados__content__section--primary__title,
   .contato__content__section--primary__title,
-  .hero__title {
+  .hero__title,
+  .desvendando__content__section--primary__title,
+  .audiencia__content--primary__title {
     font-size: 2em;
   }
   .desvendando__content__section--secundary__group-box__box .question,
@@ -1658,7 +1853,9 @@
   .conatiner-option .option {
     padding: 2em 1em;
   }
-  .conatiner-option .option--primary__title {
+  .conatiner-option .option--primary__title,
+  .desvendando__content__section--primary__title,
+  .audiencia__content--primary__title {
     font-size: 1.8em;
   }
   .conatiner-option .option--primary i {
@@ -1683,7 +1880,9 @@
   .material__content__section--primary__title,
   .resultados__content__section--primary__title,
   .contato__content__section--primary__title,
-  .hero__title {
+  .hero__title,
+  .audiencia__content--primary__title,
+  .desvendando__content__section--primary__title {
     font-size: 1.8em;
   }
   .button--secondary,

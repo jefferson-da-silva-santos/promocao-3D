@@ -608,6 +608,18 @@ $color-black: black;
         max-width: 40em;
       }
 
+      .galeria-jogo-da-vida {
+        width: 100%;
+        max-width: 40em;
+        @include grid-layout(1fr 1fr, auto, 1rem, 1rem);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
       .group-buttons {
         margin-top: 5rem;
         @include flex-box(row, center, center, 1em);
@@ -653,6 +665,184 @@ $color-black: black;
           &:hover {
             background-color: darken(rgb(21, 128, 0), 5%);
           }
+        }
+      }
+
+      .buttons-jogo-da-vida {
+        margin-top: 5rem;
+        @include flex-box(row, center, center, 1em);
+        .btn-jogo-da-vida {
+          border: none;
+          padding: 0.5em 2em;
+          border-radius: 10px;
+          box-shadow: 6px 3px 7px 0px #00000048;
+          color: white;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          background-color: rgb(0, 0, 151);
+        }
+        .active {
+          transform: scale(110%) translateY(-0.5em);
+          background-color: lighten(rgb(0, 0, 151), 20%);
+        }
+      }
+
+      .btn-mapa {
+        position: absolute;
+        background-color: rgba(0, 38, 255, 0.098);
+        width: 10em;
+        height: 10em;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        z-index: 900;
+        animation: buttonMapa 2s ease 0s infinite normal forwards;
+      }
+
+      @keyframes buttonMapa {
+        0% {
+          transform: scale(100%);
+        }
+        50% {
+          transform: scale(110%);
+        }
+        100% {
+          transform: scale(100%);
+        }
+      }
+
+      .btn-mapa-1 {
+        top: 0;
+        cursor: pointer;
+      }
+
+      .btn-mapa-2 {
+        top: 15%;
+        right: 6%;
+      }
+
+      .btn-mapa-3 {
+        bottom: 13.5%;
+        right: 9%;
+      }
+
+      .btn-mapa-4 {
+        bottom: 0;
+        left: 38%;
+      }
+
+      .btn-mapa-5 {
+        bottom: 16%;
+        left: 9%;
+      }
+
+      .btn-mapa-6 {
+        top: 20%;
+        left: 7%;
+      }
+
+      .btn-mapa-7 {
+        top: 42%;
+        left: 5%;
+        display: none;
+      }
+      .btn-mapa-8 {
+        right: 4%;
+        display: none;
+      }
+    }
+
+     &__section--secundary-jogo {
+      padding-top: 2em;
+      @include flex-box(column, center, center, 0);
+
+      .group-image {
+        background-color: #ccc;
+        @include flex-box(column, center, center, 0);
+        position: relative;
+      }
+
+      .img-mapa {
+        width: 100%;
+        max-width: 40em;
+      }
+
+      .galeria-jogo-da-vida {
+        width: 100%;
+        max-width: 40em;
+        @include grid-layout(1fr 1fr, auto, 1rem, 1rem);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .group-buttons {
+        margin-top: 5rem;
+        @include flex-box(row, center, center, 1em);
+
+        &__btn {
+          border: none;
+          padding: 0.5em 2em;
+          border-radius: 10px;
+          box-shadow: 6px 3px 7px 0px #00000048;
+          color: white;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .active {
+          transform: scale(110%) translateY(-0.5em);
+        }
+
+        .btn-01 {
+          background-color: rgb(181, 0, 0);
+          &:hover {
+            background-color: darken(rgb(181, 0, 0), 5%);
+          }
+        }
+
+        .btn-02 {
+          background-color: rgb(181, 0, 0);
+          &:hover {
+            background-color: darken(rgb(181, 0, 0), 5%);
+          }
+        }
+
+        .btn-03 {
+          background-color: rgb(255, 255, 0);
+          color: black;
+          &:hover {
+            background-color: darken(rgb(255, 255, 0), 5%);
+          }
+        }
+
+        .btn-04 {
+          background-color: rgb(21, 128, 0);
+          &:hover {
+            background-color: darken(rgb(21, 128, 0), 5%);
+          }
+        }
+      }
+
+      .buttons-jogo-da-vida {
+        margin-top: 5rem;
+        @include flex-box(row, center, center, 1em);
+        .btn-jogo-da-vida {
+          border: none;
+          padding: 0.5em 2em;
+          border-radius: 10px;
+          box-shadow: 6px 3px 7px 0px #00000048;
+          color: white;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          background-color: rgb(0, 0, 151);
+        }
+        .active {
+          transform: scale(110%) translateY(-0.5em);
+          background-color: lighten(rgb(0, 0, 151), 20%);
         }
       }
 
@@ -1068,7 +1258,7 @@ $color-black: black;
       iframe {
         width: 100%;
         height: 100%;
-        aspect-ratio: 8/4;
+        aspect-ratio: 20/10;
         border-radius: 10px;
       }
 
@@ -1079,22 +1269,14 @@ $color-black: black;
         button {
           @include flex-box(row, center, center, 0);
           cursor: pointer;
-          width: 3rem;
-          height: 3rem;
-          border-radius: 50%;
-          background-color: $color-white;
+          width: max-content;
+          padding: .4rem 2rem;
+          border-radius: 10px;
+          background-color: #cda625;
+          color: $color-white;
           border: none;
-
-          i {
-            font-size: 2rem;
-            transition: all 0.3s ease;
-            color: #d0a97c;
-            margin-bottom: 3px;
-
-            &:hover {
-              color: darken(#d0a97c, 10%);
-            }
-          }
+          font-weight: 600;
+          font-size: 1.1rem;
         }
       }
     }
@@ -1610,11 +1792,13 @@ $color-black: black;
 }
 
 @include media-query(770px) {
-  .desvendando__content__section--secundary .group-buttons {
+  .desvendando__content__section--secundary .group-buttons,
+  .desvendando__content__section--secundary-jogo .buttons-jogo-da-vida {
     flex-direction: column;
   }
 
-  .desvendando__content__section--secundary .group-buttons__btn {
+  .desvendando__content__section--secundary .group-buttons__btn,
+  .desvendando__content__section--secundary-jogo .buttons-jogo-da-vida {
     width: 100%;
   }
 }
@@ -1625,7 +1809,9 @@ $color-black: black;
   .desvendando__content__section--primary__title,
   .material__content__section--primary__title,
   .resultados__content__section--primary__title,
-  .contato__content__section--primary__title {
+  .contato__content__section--primary__title,
+  .desvendando__content__section--primary__title,
+  .audiencia__content--primary__title {
     font-size: 2.5em;
   }
 }
@@ -1693,7 +1879,9 @@ $color-black: black;
     min-height: 60em;
   }
 
-  .conatiner-option .option--primary__title {
+  .conatiner-option .option--primary__title,
+  .desvendando__content__section--primary__title,
+  .audiencia__content--primary__title {
     font-size: 2em;
   }
 
@@ -1724,7 +1912,9 @@ $color-black: black;
   .material__content__section--primary__title,
   .resultados__content__section--primary__title,
   .contato__content__section--primary__title,
-  .hero__title {
+  .hero__title,
+  .desvendando__content__section--primary__title,
+  .audiencia__content--primary__title {
     font-size: 2em;
   }
   .desvendando__content__section--secundary__group-box__box .question,
@@ -1771,7 +1961,9 @@ $color-black: black;
     padding: 2em 1em;
   }
 
-  .conatiner-option .option--primary__title {
+  .conatiner-option .option--primary__title,
+  .desvendando__content__section--primary__title,
+  .audiencia__content--primary__title {
     font-size: 1.8em;
   }
 
@@ -1801,7 +1993,9 @@ $color-black: black;
   .material__content__section--primary__title,
   .resultados__content__section--primary__title,
   .contato__content__section--primary__title,
-  .hero__title {
+  .hero__title,
+  .audiencia__content--primary__title,
+  .desvendando__content__section--primary__title {
     font-size: 1.8em;
   }
 
